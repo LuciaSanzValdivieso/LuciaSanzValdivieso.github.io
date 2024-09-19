@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Review Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Translation Review</h1>
+
+        <!-- Segment Display -->
+        <div id="segment-pair">
+            <p id="spanish-segment">[Spanish Sentence Here]</p>
+            <p id="english-segment">[English Translation Here]</p>
+        </div>
+
+        <!-- Buttons for user interaction -->
+        <div class="button-group">
+            <button id="correct-btn">Flag as Correct</button>
+            <button id="error-btn">Add Error Report</button>
+        </div>
+
+        <!-- Error Report Section -->
+        <div id="error-report-section" class="hidden">
+            <div class="error-report-row">
+                <label>Select what is wrong:</label>
+                <div id="error-selection" class="error-selection"></div>
+            </div>
+
+            <div class="error-report-row">
+                <label for="error-type">Type of Error:</label>
+                <select id="error-type">
+                    <option value="Select">Select</option>
+                    <option value="Minor">Minor Error</option>
+                    <option value="Major">Major Error</option>
+                </select>
+            </div>
+
+            <div class="error-report-row">
+                <label for="correct-equivalent">Correct Equivalent in English:</label>
+                <input type="text" id="correct-equivalent" placeholder="Enter correct English phrase">
+            </div>
+        </div>
+
+        <!-- Other Comments Section -->
+        <div id="other-comments-section" class="hidden">
+            <label for="other-comments">Other Comments (optional):</label>
+            <textarea id="other-comments" rows="3" placeholder="Enter additional comments here..."></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div id="submit-button-section" class="hidden">
+            <button id="submit-btn">Submit and Show Next</button>
+        </div>
+
+        <!-- Notification for last segment -->
+        <p id="last-segment-notification" class="hidden">That was the last pair of segments. Thank you so much for your collaboration!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

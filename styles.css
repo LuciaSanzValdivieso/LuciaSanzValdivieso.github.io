@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#segment-pair {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#correct-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#error-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.error-report-row {
+    margin: 10px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea, input, select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+#error-report-section {
+    background-color: #fffbe6;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-left: 5px solid #ff9800;
+}
+
+#error-selection {
+    min-height: 40px;
+    background-color: #eaeaea;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
