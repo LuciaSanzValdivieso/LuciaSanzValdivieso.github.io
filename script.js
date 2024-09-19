@@ -58,23 +58,24 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
+        console.log('Sending data:', data);  // Debugging line to check data being sent
         sendToGoogleSheets(data);
         currentIndex++;
         loadNextSegment();
     });
 
     function sendToGoogleSheets(data) {
-        fetch('https://script.google.com/macros/s/AKfycbzk-Df6ZZi7kTkLD0Rh1xScwo9OQHR0DD4ZHEM0rdNjvl2DtnQIn03gce_3hafkbag37g/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbzk-Df6ZZi7kTkLD0Rh1xScwo9OQHR0DD4ZHEM0rdNjvl2DtnQIn03gce_3hafkbag37g/exec', { // Replace with your actual deployment URL
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
         })
-        .then(response => response.json())  // You can handle the response here
-        .catch(error => console.error('Error:', error));
+        .then(response => response.json())  // Handle the response
+        .then(responseData => console.log('Response from server:', responseData))  // Debug response from the server
+        .catch(error => console.error('Error:', error));  // Catch and log errors
     }
-
 
     loadNextSegment();
 });
