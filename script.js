@@ -65,17 +65,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function sendToGoogleSheets(data) {
-        fetch('https://script.google.com/macros/s/AKfycbwCdGzq8E6WY4wpqareSDTbYNmzWDet_JmSZY1qLR4wfHS-EbhhsdHnXNctIDY1ZbP5nA/exec', { // Replace with your actual deployment URL
+        fetch('https://script.google.com/macros/s/AKfycbwqiIBMJy6vWvpo9wQnDuOZAv7WwoTXkc9s2VlnRUwi6HFuhnbwieWp4b3HtSbhewBUtA/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
         })
-        .then(response => response.json())  // Handle the response
-        .then(responseData => console.log('Response from server:', responseData))  // Debug response from the server
-        .catch(error => console.error('Error:', error));  // Catch and log errors
+        .then(response => response.json())  // You can handle the response here
+        .catch(error => console.error('Error:', error));
     }
+
 
     console.log('Sending data:', data);
 
