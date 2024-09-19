@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
    function sendToServer(data) {
-    fetch('http://localhost:3000/submit', {  // Use your server URL here
+    fetch('http://localhost:3000', {  // URL of your local server
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -75,9 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.json())
     .then(data => console.log('Success:', data))
     .catch(error => console.error('Error:', error));
-}
-
-
+    }
 
 // Call the function to send data
 sendToServer(data);
