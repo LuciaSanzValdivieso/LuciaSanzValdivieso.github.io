@@ -77,5 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Error:', error));  // Catch and log errors
     }
 
+    console.log('Sending data:', data);
+
     loadNextSegment();
 });
