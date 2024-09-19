@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function sendToGoogleSheets(data) {
-        fetch('https://script.google.com/macros/s/AKfycbwNd5Dg55XTDSwnbqlXMyHGiNk1VrpjlaSCrRS3d_vigIVpBUBzVIODCCEQ4d0AVCUaTQ/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbzk-Df6ZZi7kTkLD0Rh1xScwo9OQHR0DD4ZHEM0rdNjvl2DtnQIn03gce_3hafkbag37g/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
