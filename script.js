@@ -64,17 +64,24 @@ document.addEventListener('DOMContentLoaded', function() {
         loadNextSegment();
     });
 
-    function sendToGoogleSheets(data) {
-        fetch('https://script.google.com/macros/s/AKfycbwqiIBMJy6vWvpo9wQnDuOZAv7WwoTXkc9s2VlnRUwi6HFuhnbwieWp4b3HtSbhewBUtA/exec', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())  // You can handle the response here
-        .catch(error => console.error('Error:', error));
-    }
+   function sendToServer(data) {
+    fetch('http://localhost:3000/submit', {  // Use your server URL here
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => console.log('Success:', data))
+    .catch(error => console.error('Error:', error));
+}
+
+
+
+// Call the function to send data
+sendToServer(data);
+
 
 
     console.log('Sending data:', data);
