@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function sendToGoogleSheets(data) {
-        fetch('https://script.google.com/macros/s/AKfycbwDw-MSomH35dtsY5dXQRV-Cm4661KCJ8XQpqZbQ6ff60gO-MrSa0QLPox2lAo7eHj-1w/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbwa2EJVYq3S53BhrAyCExSzqLK4CZ-5YAR-PMauATXana4nPGDu6WU5QZHFHnjSfY8hUQ/exec', {
             method: 'POST',
             mode: 'no-cors',
             headers: {
