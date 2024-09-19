@@ -59,20 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         sendToGoogleSheets(data);
-        resetForm();
         currentIndex++;
         loadNextSegment();
     });
-
-    function resetForm() {
-        otherCommentsTextarea.value = '';
-        correctEquivalentInput.value = '';
-        errorTypeSelect.value = 'Select';
-        errorSelectionDiv.innerText = '';
-        errorReportSection.classList.add('hidden');
-        otherCommentsSection.classList.add('hidden');
-        submitButtonSection.classList.add('hidden');
-    }
 
     function sendToGoogleSheets(data) {
         fetch('https://script.google.com/macros/s/AKfycbzd6RpZ2-0XEV3wArLq96-DFqFr_h2veJyt_lgNUKnB2nu7zM7rGppHKmIxfkE9WJlWhg/exec', {
